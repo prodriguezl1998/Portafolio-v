@@ -1,31 +1,51 @@
 /* 🎨 Estilos generales */
 body {
-    background: rgb(239, 239, 239);
-    color: #00549a;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
+    background: #f5f7fa;
+    color: #021120;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
+/* 🔠 Titulares */
 h1 {
     color: white;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: rgb(186, 193, 199);
+    font-size: 24px;
+    color: #00549a;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
+h6 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* 🔘 Botón moderno */
 button {
-    background: gray;
-    border: none;
+    background: #00549a;
     color: white;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
 }
 
+button:hover {
+    background: #003f7f;
+}
+
+/* 📑 Listas y navegación */
 ul {
     margin: 0;
     padding: 0;
@@ -91,42 +111,102 @@ footer {
     color: #00549a;
 }
 
-/* 🔳 Secciones */
+/* 🔳 Layout de secciones */
 section {
     background: white;
-    color: gray;
+    color: rgb(128, 128, 128);
     padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-section div {
-    background: gray;
-    width: 100%;
-    margin: 1px;
+
+/* 🧊 Estilo para .section-a (translúcida y gris suave) */
+.section-a {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 25px;
+    color: #2c3e50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.feature-box div {
-    width: 100%;
-    margin: 1px;
+.section-a:hover {
+    transform: translateY(-5px);
 }
 
-section.feature-box {
-    display: flex;
+/* 🧱 Estilo general de tarjetas */
+section div,
+.feature-box div,
+section.feature-box.sales div,
+section.feature-box.closeouts div,
+div {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 15px;
+    color: #1b233c;
+    transition: transform 0.3s ease;
+    flex: 1 1 300px;
 }
 
+section div:hover {
+    transform: translateY(-5px);
+}
+
+/* 🎨 Estilos por categoría */
 section.feature-box.sales div {
-    background: gray;
+    font-family: 'Roboto', Sans-serif;
+    background: linear-gradient(145deg, #f8f7f7, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 15px;
+    color: #1b233c;
+    transition: transform 0.3s ease;
+    flex: 1 1 300px;
 }
 
 section.feature-box.closeouts div {
-    background: rgb(147, 163, 180);
+    background: #f5faff; /* celeste muy claro */
 }
 
 div {
-    background: gray;
+    background: #dbe3f7;
     width: 100px;
     color: white;
     padding: 20px;
     margin: auto;
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .floating-menu {
+        flex-wrap: wrap;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .section-a {
+        padding: 20px;
+        margin: 10px 0;
+    }
 }
