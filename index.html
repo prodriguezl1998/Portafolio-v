@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="animated-header"> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1>Patricia Rodriguez L. Portfolio</h1>
+        <img src="images/header pic.png" alt="Imagen circular">
+        <h6>Actuary | Data Analyst | Data Scientist</h6>
+
+        <!-- Floating Menu -->
+        <nav class="floating-menu">
+            <a href="#">Power BI</a>
+            <a href="#">Data Science</a>
+            <a href="#">Data Analysis</a>
+            <a href="#">Reporting Automation</a>
+        </nav>
+    </header> 
+
+    <section class="feature-box sales">
+        <div>Section a</div>
+        <div>Section b</div>
+        <div>Section c</div>
+    </section>
+
+    <section class="feature-box closeouts">
+        <div>Section d</div>
+        <div>Section e</div>
+    </section>
+
+    <section>lower-section</section>
+    <footer>footer</footer>
+
+    <h1>My Webpage</h1>
+    <p>So this is a paragraph <br> of <strong>text</strong></p>
+    <p><button>Click here to learn more</button></p>
+    <h2>So this is a paragraph of text</h2>
+    <p>So I'm actually trying to get better every single day</p>
+
+    <!-- 🎬 Fondo animado del header -->
+    <script>
+        const header = document.getElementById("animated-header");
+        const backgrounds = [
+            "images/background ai.jpg",
+            "images/background ai 2.jpg",
+            "images/background ai 3.jpg"
+        ];
+        let index = 0;
+
+        function changeBackground() {
+            header.style.backgroundImage = `url('${backgrounds[index]}')`;
+            index = (index + 1) % backgrounds.length;
+        }
+
+        setInterval(changeBackground, 5000);
+        changeBackground();
+    </script>
+
+</body>
+</html>

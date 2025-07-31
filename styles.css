@@ -1,0 +1,132 @@
+/* 🎨 Estilos generales */
+body {
+    background: rgb(239, 239, 239);
+    color: #00549a;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: rgb(186, 193, 199);
+}
+
+button {
+    background: gray;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* 🧭 Fondo animado en el header */
+#animated-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#animated-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 📌 Menú flotante */
+.floating-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(184, 184, 184, 0.5);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    width: fit-content;
+}
+
+.floating-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #1b233c;
+    transition: 0.3s;
+}
+
+.floating-menu a:hover {
+    background: white;
+    color: #00549a;
+}
+
+/* 🔳 Secciones */
+section {
+    background: white;
+    color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+section div {
+    background: gray;
+    width: 100%;
+    margin: 1px;
+}
+
+.feature-box div {
+    width: 100%;
+    margin: 1px;
+}
+
+section.feature-box {
+    display: flex;
+}
+
+section.feature-box.sales div {
+    background: gray;
+}
+
+section.feature-box.closeouts div {
+    background: rgb(147, 163, 180);
+}
+
+div {
+    background: gray;
+    width: 100px;
+    color: white;
+    padding: 20px;
+    margin: auto;
+}
