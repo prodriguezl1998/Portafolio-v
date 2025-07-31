@@ -301,4 +301,59 @@ section.feature-box.closeouts div {
     backdrop-filter: blur(10px);
     transition: background 0.3s ease, color 0.3s ease;
   }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px
+}
+
+.section-a,
+.feature-box div,
+.card {
+  flex: 1 1 300px; /* crece, reduce, ancho mínimo */
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem; /* escala con base en el usuario */
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .floating-menu {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .section-a,
+    .card {
+      margin: 10px auto;
+    }
+  }
+
+  
+  .card {
+    padding: 2rem;
+    margin: 1rem;
+  }
   
